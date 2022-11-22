@@ -1,5 +1,6 @@
 # Redmine like plugin
 This plugin allows you to send the like on Redmine. It is a very simple plugin, so please modify it freely.
+It was forked from https://github.com/happy-se-life/like
 
 # Updated on Redmine 5.0.2
 
@@ -16,7 +17,7 @@ bundle exec rake redmine:plugins:migrate RAILS_ENV=production
 ## Features
 * You can like issues, notes and wikis.
 * e-mail notifications when someone likes you.
-* View the number of likes recieved/sent each user on the summary page. 
+* View the number of likes received/sent each user on the summary page. 
 
 ## Screenshots
 
@@ -43,7 +44,7 @@ bundle exec rake redmine:plugins:migrate RAILS_ENV=production
 
 2. Put the code.
 <pre>
-git clone https://github.com/happy-se-life/like.git
+git clone https://github.com/bkamberoglu/like
 </pre>
 
 3. Run migration.
