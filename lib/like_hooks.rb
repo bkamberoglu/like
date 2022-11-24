@@ -32,8 +32,8 @@ module LikeHooks
     def view_layouts_base_content(context={})
       request = context[:request]
       if context[:controller].controller_name == 'wiki' && context[:controller].action_name == 'show' then
-        wiki_title = URI.decode(request.path.split("/").last)
-        str = URI.decode(request.path.split("/projects/").last)
+        wiki_title = CGI.escape(request.path.split("/").last)
+        str = CGI.escape(request.path.split("/projects/").last)
         identifier = str.split("/wiki/").first
         wiki_pages = WikiPage.where(title: wiki_title)
         for wiki_page in wiki_pages do
